@@ -1,0 +1,55 @@
+/* =====================================================================
+   v30 · SHAMS inside the product view on phones & tablets
+   While she explains a product (#olh-root.olh-over3d) on the stacked /
+   landscape product layout, JS (olga-v30-shams3d-js) measures the 3D
+   stage and pins her to its lower corner (.olh-in3d); the product slides
+   to the other side (.o3d--shams) so both stay clearly visible.
+   ===================================================================== */
+#olh-root.olh-over3d{z-index:150}
+/* none of the phone "step aside" states may hide her while she explains */
+#olh-root.olh-over3d.olh-shop-quiet:not(.is-open) #olh-bubble.is-on,
+#olh-root.olh-over3d.olh-scroll:not(.is-open) #olh-bubble.is-on,
+#olh-root.olh-over3d.olh-ess:not(.is-open) #olh-bubble.is-on{opacity:1;transform:none;pointer-events:auto}
+#olh-root.olh-over3d.olh-shop-quiet:not(.is-open):not(.is-hidden) #olh-guide,
+#olh-root.olh-over3d.olh-scroll:not(.is-open):not(.is-hidden) #olh-guide,
+#olh-root.olh-over3d.olh-ess:not(.is-open):not(.is-hidden) #olh-guide{opacity:1;transform:none}
+#olh-root.olh-over3d:not(.is-open) #olh-canvas,#olh-root.olh-over3d:not(.is-open) #olh-bubble.is-on{pointer-events:auto}
+
+/* pinned inside the 3D stage */
+#olh-root.olh-in3d{top:auto;bottom:var(--o3b,0px);inset-inline-start:var(--o3s,0px);animation:olhIn3d .55s cubic-bezier(.2,.8,.2,1) both}
+#olh-root.olh-in3d #olh-guide{width:var(--gw,150px);height:var(--gh,190px);margin-inline-start:calc(var(--gw,150px) * -.2)}
+#olh-root.olh-in3d #olh-canvas{width:var(--gw,150px);height:var(--gh,190px)}
+#olh-root.olh-in3d #olh-bubble{bottom:calc(var(--gh,190px) * 1.02);inset-inline-start:calc(var(--gw,150px) * .2 + 10px);
+  width:var(--bw,240px);max-height:var(--bmax,220px);overflow-y:auto;overscroll-behavior:contain;
+  padding:11px 12px 9px;font-size:13px;line-height:1.5;box-shadow:0 18px 40px -18px rgba(8,10,5,.7)}
+#olh-root.olh-in3d #olh-bubble p{margin:2px 0 8px}
+#olh-root.olh-in3d #olh-bubble .olh-btn{font-size:12px;padding:5px 10px}
+#olh-root.olh-in3d.is-open #olh-guide{opacity:0;pointer-events:none}
+@keyframes olhIn3d{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* the product makes room for her */
+.o3d.o3d--shams .o3d__cv{transform:translateX(var(--o3x,0px));transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.o3d.o3d--shams .o3d__flat{left:calc(50% + var(--o3x,0px));transition:left .8s cubic-bezier(.2,.8,.2,1)}
+.o3d__cv,.o3d__flat{transition:transform .6s cubic-bezier(.2,.8,.2,1),left .6s cubic-bezier(.2,.8,.2,1)}
+/* v31 · phones: the bubble always floats above her headscarf, never over her face
+   (her head starts ~8% below the top of the canvas; JS olga-v31-bubble-js fine-tunes it live) */
+@media (max-width:640px){#olh-root:not(.olh-in3d) #olh-bubble{bottom:calc(253px * .93 + 8px)}}
+@media (max-width:380px){#olh-root:not(.olh-in3d) #olh-bubble{bottom:calc(228px * .93 + 8px)}}
+@media (max-height:560px) and (orientation:landscape){#olh-root:not(.olh-in3d) #olh-bubble{bottom:84px}}
+/* v32 · message-box accent redesigned: a fine tatreez band that sits INSIDE the box
+   (inset from the rounded corners, fading at both ends) instead of a bar laid over the edge */
+#olh-root #olh-bubble{padding-top:24px;border-color:rgba(197,163,106,.38);
+  background:linear-gradient(180deg,#FFFDF8 0%,var(--olh-paper) 46px);
+  box-shadow:0 18px 44px -18px rgba(31,40,26,.5),0 2px 6px -2px rgba(31,40,26,.12),inset 0 1px 0 rgba(255,255,255,.9)}
+#olh-root #olh-bubble::before{inset:10px 18px auto 18px;height:6px;border-radius:0;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='6' viewBox='0 0 18 6'%3E%3Cpath d='M4.5 0 7.5 3 4.5 6 1.5 3Z' fill='%239E1B32'/%3E%3Ccircle cx='9' cy='3' r='.9' fill='%23C5A36A'/%3E%3Cpath d='M13.5 .8 15.7 3 13.5 5.2 11.3 3Z' fill='%2387916B'/%3E%3C/svg%3E") 50% 0/18px 6px repeat-x;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%);
+          mask-image:linear-gradient(90deg,transparent 0,#000 22px,#000 calc(100% - 22px),transparent 100%);
+  opacity:.92;pointer-events:none}
+#olh-root #olh-bubble::after{content:"";position:absolute;top:20px;left:18px;right:18px;height:1px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(197,163,106,.45) 18%,rgba(197,163,106,.45) 82%,transparent)}
+#olh-root #olh-btext{margin-top:6px}
+#olh-root.olh-in3d #olh-bubble{padding-top:23px}
+@media (max-width:640px){#olh-root #olh-bubble::before{inset:9px 16px auto 16px}#olh-root #olh-bubble::after{top:19px;left:16px;right:16px}}
+@media (max-height:560px) and (orientation:landscape){#olh-root #olh-bubble{padding-top:21px}#olh-root #olh-bubble::before{inset:8px 14px auto 14px;height:5px;background-size:15px 5px}#olh-root #olh-bubble::after{top:17px;left:14px;right:14px}}
+@media (prefers-reduced-motion:reduce){#olh-root.olh-in3d{animation:none}.o3d.o3d--shams .o3d__cv,.o3d.o3d--shams .o3d__flat{transition:none}}

@@ -1,0 +1,249 @@
+{
+  "whatsapp": "https://wa.me/962792000155",
+  "face": {
+    "mouth": [
+      235.7,
+      95.5
+    ],
+    "mw": 30,
+    "mh": 4.5,
+    "eyeL": [
+      217.7,
+      63.3
+    ],
+    "eyeR": [
+      250.6,
+      63.3
+    ],
+    "ew": 10,
+    "eh": 4,
+    "neck": [
+      236,
+      150
+    ],
+    "head": [
+      171,
+      0
+    ]
+  },
+  "order": {
+    "ar": "الطلب سهل: ضيفي المنتجات للسلة، اضغطي «إتمام الطلب»، عبّي تفاصيل التوصيل وابعتي الطلب على واتساب. فريق أولغا بيأكد معك رسوم التوصيل والموعد وطريقة الدفع، والتوصيل لكل مناطق الأردن 🚚",
+    "en": "Ordering is easy: add products to your bag, tap Checkout, fill in your delivery details and send the order on WhatsApp. The Olga team confirms the delivery fee, timing and payment — delivery across Jordan 🚚"
+  },
+  "wholesale": {
+    "ar": "لطلبات الجملة والتعاون التجاري تواصلي مع شركة باتل للصناعات الطبيعية: ‎+962 79 673 8495‎ أو batte.jor9@gmail.com",
+    "en": "For wholesale and trade partnerships contact BatteL Natural Industries: +962 79 673 8495 or batte.jor9@gmail.com"
+  },
+  "about": {
+    "ar": "أولغا من شركة باتل للصناعات الطبيعية، صُنع في الأردن. تركيباتنا طبيعية بنسبة 99%، بدون سلفات أو بارابين، وآمنة للبشرة الحساسة 🌿",
+    "en": "Olga is made in Jordan by BatteL Natural Industries. Our formulations are 99% natural, free from sulfates and parabens, and safe for sensitive skin 🌿"
+  },
+  "products": [
+    {
+      "id": "nabulsi",
+      "keys": [
+        "nabulsi liquid",
+        "nabulsi soap",
+        "نابلسي سائل",
+        "صابون نابلسي سائل",
+        "olive",
+        "زيت الزيتون",
+        "الزيتون"
+      ],
+      "name": {
+        "en": "Nabulsi Liquid Soap",
+        "ar": "صابون نابلسي سائل"
+      },
+      "desc": {
+        "en": "Olive-oil hand wash & shower soap for deep hydration and softness.",
+        "ar": "غسول للأيدي وصابون استحمام بزيت الزيتون، ترطيب فائق ونعومة."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "300 ml",
+            "ar": "300 مل"
+          },
+          "price": 3.5
+        },
+        {
+          "size": {
+            "en": "900 ml",
+            "ar": "900 مل"
+          },
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "shea",
+      "keys": [
+        "shea butter liquid",
+        "shea soap",
+        "الشيا السائل",
+        "صابون الشيا",
+        "زبدة الشيا",
+        "بزبدة الشيا"
+      ],
+      "name": {
+        "en": "Shea Butter Liquid Soap",
+        "ar": "صابون سائل بزبدة الشيا"
+      },
+      "desc": {
+        "en": "Deep moisture that protects skin from dryness.",
+        "ar": "ترطيب عميق يحمي البشرة من الجفاف."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "300 ml",
+            "ar": "300 مل"
+          },
+          "price": 3.5
+        },
+        {
+          "size": {
+            "en": "900 ml",
+            "ar": "900 مل"
+          },
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "laurel",
+      "keys": [
+        "laurel",
+        "غار"
+      ],
+      "name": {
+        "en": "Liquid Laurel Soap",
+        "ar": "صابون غار سائل"
+      },
+      "desc": {
+        "en": "Laurel oil — purifying, soothing, for all skin types.",
+        "ar": "بزيت الغار — مطهّر ومهدّئ ومناسب لجميع أنواع البشرة."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "300 ml",
+            "ar": "300 مل"
+          },
+          "price": 3.5
+        },
+        {
+          "size": {
+            "en": "900 ml",
+            "ar": "900 مل"
+          },
+          "price": 6.5
+        }
+      ]
+    },
+    {
+      "id": "laundry",
+      "keys": [
+        "laundry",
+        "غسيل",
+        "الغسيل"
+      ],
+      "name": {
+        "en": "Nabulsi Laundry Soap",
+        "ar": "صابون نابلسي لغسيل الملابس"
+      },
+      "desc": {
+        "en": "Removes tough stains, keeps fabrics soft, ideal for children’s clothes.",
+        "ar": "يزيل البقع الصعبة ويحافظ على نعومة الأقمشة، مثالي لملابس الأطفال."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "1800 g",
+            "ar": "1800 غ"
+          },
+          "price": 4.5
+        }
+      ]
+    },
+    {
+      "id": "moroccan",
+      "keys": [
+        "moroccan",
+        "hammam",
+        "المغربي",
+        "الحمام المغربي",
+        "الحمّام المغربي"
+      ],
+      "name": {
+        "en": "Moroccan Hammam Soap",
+        "ar": "صابون الحمّام المغربي"
+      },
+      "desc": {
+        "en": "Natural Moroccan oils for deep cleansing, detox and radiance.",
+        "ar": "زيوت مغربية طبيعية لتنظيف عميق وتقشير وإشراقة."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "Jar · gift box",
+            "ar": "علبة · صندوق هدية"
+          },
+          "price": 5.0
+        }
+      ]
+    },
+    {
+      "id": "shea-duo",
+      "keys": [
+        "shea ritual duo",
+        "shea duo",
+        "ثنائي الشيا"
+      ],
+      "name": {
+        "en": "Shea Ritual Duo",
+        "ar": "ثنائي الشيا"
+      },
+      "desc": {
+        "en": "Shea 300 ml + 900 ml — a lovely gift.",
+        "ar": "شيا 300 مل + 900 مل — هدية مميزة."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "2 bottles",
+            "ar": "عبوتان"
+          },
+          "price": 9.5
+        }
+      ]
+    },
+    {
+      "id": "home-set",
+      "keys": [
+        "home set",
+        "مجموعة أولغا للمنزل",
+        "مجموعة المنزل",
+        "6 عبوات",
+        "6 bottles"
+      ],
+      "name": {
+        "en": "The Olga Home Set",
+        "ar": "مجموعة أولغا للمنزل"
+      },
+      "desc": {
+        "en": "Six bottles of shea liquid soap — best value for families.",
+        "ar": "ست عبوات من صابون الشيا السائل — الخيار الأوفر للعائلات."
+      },
+      "variants": [
+        {
+          "size": {
+            "en": "6 bottles",
+            "ar": "6 عبوات"
+          },
+          "price": 19.0
+        }
+      ]
+    }
+  ]
+}

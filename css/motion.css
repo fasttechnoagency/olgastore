@@ -1,0 +1,50 @@
+/* ===== Motion & Reveal v25 ===== */
+/* =====================================================================
+   v25 · mobile smoothness pass
+   ===================================================================== */
+/* add-to-bag orb: transform / opacity only */
+.ofx-cv{inset:auto;left:0;top:0;width:0;height:0;display:none;contain:strict}
+.ofx-orb{will-change:transform,opacity;transform-origin:50% 50%;backface-visibility:hidden}
+.ofx-orb img{height:84%}
+.ofx-oil{top:58%;transition:none}
+.bag-count.ofx-pop,.bag-float.ofx-pop .bag-float__n{animation:bump .6s var(--ease)}
+/* snappy, predictable taps everywhere */
+a,button,label,select,summary,[role=button],[role=tab],.pcard__stage{touch-action:manipulation}
+.add,.qstep__btn,.size,.catc,.mchip,.btn{-webkit-user-select:none;user-select:none}
+.qctl>.add,.qctl>.btn,.qctl .qstep{will-change:opacity,transform}
+@media (max-width:760px),(pointer:coarse){
+  /* the bag orb on phones: lighter glow, no spinning oil (it stays one cheap layer) */
+  .ofx-orb{box-shadow:0 0 0 2px var(--gold-soft),0 0 0 4px rgba(53,69,45,.45),0 0 18px 3px rgba(226,203,158,.6)}
+  .ofx-oil{animation:none}
+  .ofx-ring{box-shadow:0 0 14px 3px rgba(226,203,158,.6)}
+  /* no live background blur on things that sit over scrolling content */
+  .header.is-solid .nav{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(250,246,238,.97)}
+  .toolbar{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(250,246,238,.97)}
+  .pcard__badge,.pcard__stage .pcard__hint3d,.catc__count,.hslide__badge,.ccard,.reel__play,.ritual__zoom,.gtile__zoom,.ingredient,.hb__arrow{-webkit-backdrop-filter:none;backdrop-filter:none}
+  .pcard__badge{background:rgba(31,40,26,.92)}
+  .pcard__stage .pcard__hint3d{background:rgba(31,40,26,.88)}
+  .catc__count{background:rgba(251,246,236,.94)}
+  .catc.is-active .catc__count{background:rgba(226,203,158,.16)}
+  /* reveals: flat, shorter and lighter on phones (no 3D tilt per card) */
+  .grid{perspective:none}
+  .grid>[data-reveal]{transform:translate3d(0,34px,0)}
+  .grid>[data-reveal].is-in{transform:none}
+  [data-reveal]{transition-duration:.75s,.85s;transition-delay:calc(var(--i,0) * 60ms)}
+  /* the product image does not chase the finger on touch screens */
+  .pcard:hover .pcard__img{transform:translate(-50%,0) scale(var(--sc,1));filter:drop-shadow(0 22px 18px rgba(37,21,13,.3)) drop-shadow(0 4px 4px rgba(37,21,13,.2))}
+  .pcard__img{transition:transform .6s var(--ease),opacity .4s var(--ease)}
+  /* instant press feedback */
+  .add:active,.qstep__btn:active{transition-duration:.08s}
+  .catc:active,.mchip:active{transform:scale(.97);transition-duration:.12s}
+}
+@media (prefers-reduced-motion:reduce){ .ofx-orb,.ofx-ring{display:none} }
+
+/* ===== Mobile Shop Guide v25 ===== */
+@media (max-width:900px){
+  #olh-root.olh-shop:not(.is-open),#olh-root.olh-shop:not(.is-open) #olh-guide,#olh-root.olh-shop:not(.is-open) #olh-canvas{pointer-events:none}
+  #olh-root.olh-shop:not(.is-open) #olh-bubble.is-on,#olh-root.olh-shop:not(.is-open) #olh-launch{pointer-events:auto}
+  #olh-root.olh-shop-quiet:not(.is-open) #olh-bubble.is-on{opacity:0;transform:translateY(6px) scale(.98);pointer-events:none}
+  #olh-root.olh-shop-quiet:not(.is-open):not(.is-hidden) #olh-guide{opacity:.55}
+  /* quick view, 3D viewer, bag and menu get the whole screen */
+  body.is-locked #olh-root:not(.is-open):not(.olh-over3d){opacity:0;visibility:hidden;pointer-events:none}
+}
